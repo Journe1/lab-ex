@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled HTML Form with Background</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg'); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="url"],
+        input[type="range"],
+        input[type="color"],
+        input[type="date"],
+        input[type="file"],
+        input[type="datetime-local"],
+        textarea,
+        select,
+        input[list] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="image"] {
+            border: none;
+            display: block;
+        }
+        textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <h1 style="text-align: center;">Enhanced HTML Form</h1>
+        
+        <!-- Basic Form Elements -->
+        <fieldset>
+            <legend>Basic Form Elements</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </fieldset>
+
+        <!-- Various Input Types -->
+        <fieldset>
+            <legend>Various Input Types</legend>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website">
+
+            <label for="agree">Agree to terms:</label>
+            <input type="checkbox" id="agree" name="agree">
+
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <label for="range">Choose a range:</label>
+            <input type="range" id="range" name="range" min="1" max="100">
+
+            <label for="favcolor">Favorite Color:</label>
+            <input type="color" id="favcolor" name="favcolor">
+
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" id="birthdate" name="birthdate">
+
+            <label for="file">Upload File:</label>
+            <input type="file" id="file" name="file">
+        </fieldset>
+
+        <!-- Select Preferences -->
+        <fieldset>
+            <legend>Select Your Preferences</legend>
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <optgroup label="Asia">
+                    <option value="ph">Philippines</option>
+                    <option value="jp">Japan</option>
+                    <option value="cn">China</option>
+                </optgroup>
+                <optgroup label="Europe">
+                    <option value="uk">United Kingdom</option>
+                    <option value="de">Germany</option>
+                    <option value="fr">France</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
+        <!-- Additional Comments -->
+        <fieldset>
+            <legend>Additional Comments</legend>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        </fieldset>
+
+        <!-- Advanced Input Types -->
+        <fieldset>
+            <legend>Advanced Input Types</legend>
+            <label for="imgupload">Upload an image:</label>
+            <input type="image" src="upload-icon.png" alt="Submit with Image">
+
+            <label for="browsers">Choose a browser:</label>
+            <input list="browsers" name="browser">
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Edge">
+            </datalist>
+
+            <label for="meetingtime">Meeting Time:</label>
+            <input type="datetime-local" id="meetingtime" name="meetingtime">
+        </fieldset>
+    </form>
+</body>
+</html>
